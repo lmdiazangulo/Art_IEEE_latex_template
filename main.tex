@@ -1,0 +1,123 @@
+\documentclass{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[hidelinks]{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{cite}
+\usepackage[noabbrev]{cleveref} 
+%
+\usepackage{transparent}
+\usepackage[caption=false, font=footnotesize]{subfig}
+\usepackage{ulem}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{lettrine}
+
+\usepackage{siunitx}
+\sisetup{load-configurations = abbreviations}
+\usepackage{amssymb,latexsym}
+\usepackage[american]{circuitikz}
+\usepackage{gensymb}
+\usepackage{verbatim}
+\usepackage{booktabs}
+\usepackage{csquotes}
+% 
+\usepackage{todonotes}
+\usepackage{lipsum}
+
+\def\sectionautorefname{Sec.}
+\def\subsectionautorefname{Sec.}
+\def\subsubsectionautorefname{Sec.}
+\def\figureautorefname{Fig.}
+\def\tableautorefname{Tab.}
+\def\equationautorefname~#1\null{%
+	(#1)}
+
+\graphicspath {{./fig/}}
+
+\newcommand{\figref}  [1] {\text{Fig}~\autoref{#1}}
+\newcommand{\tabref}  [1] {\text{Tab.}~\autoref{#1}}
+\newcommand{\subfigureautorefname}{\figureautorefname} 
+\newcommand{\grad}{\nabla}
+\newcommand{\divergence}{\grad \cdot}
+\newcommand{\curl}{\grad \times}
+\newcommand{\laplacian}{\grad^2}
+\newcommand{\iu}{j}
+
+\newcommand{\chargeDensity}{\rho}
+\newcommand{\conductivity}{\sigma}
+\newcommand{\permittivity}{\varepsilon}
+\newcommand{\effectivePermittivity}{\permittivity_e}
+\newcommand{\permeability}{\mu}
+\newcommand{\complexPermeability}{\mbox{\boldmath $\permeability$}}
+\newcommand{\magneticSusceptibility}{\chi}
+\newcommand{\skinDepth}{\delta}
+\newcommand{\wavelength}{\lambda}
+
+
+\newcommand{\SWR}{\text{SWR}}
+\newcommand{\SRF}{\text{SRF}}
+\newcommand{\complexInductance}{\mbox{\boldmath $L$}}
+
+\newcommand{\impedance}{Z}
+\newcommand{\impedanceIn}{\impedance_{\text{in}}}
+\renewcommand{\Re}{\mathbb{R}e}
+\renewcommand{\Im}{\mathbb{I}m}
+
+
+
+\newcommand{\complexImpedance}{\mbox{\boldmath $Z$}}
+\newcommand{\complexAdmittance}{\mbox{\boldmath $Y$}}
+\newcommand{\complexResidue}{\mbox{\boldmath $r$}}
+\newcommand{\complexPole}{\mbox{\boldmath $p$}}
+\newcommand{\complexCte}{\mbox{\boldmath $d$}}
+\newcommand{\complexProp}{\mbox{\boldmath $e$}}
+
+\newcommand{\SEMBA}{\textit{SEMBA-FDTD }}
+
+\newcommand{\citetemp}[1]{(#1)}
+\newcounter{mytempeqncnt}
+
+
+\author{
+	Author 1, Author 2, Author 3$^{*}$, \newline Author 4, Author 5, and Author 6, {\em IEEE Senior Member}
+	\thanks{The 1st, 2nd, 3rd, 4th, and 7th authors are with the XXXX, in University of Granada, Spain. 
+		5th author is with YYYY company.
+		6th author is with ZZZZ institution. 
+		* Corresponding author e-mail: \texttt{xxx@yyy.zzz}.}
+	\thanks{The work described in this paper and the research leading to these results were supported by the 
+		XXXX grants. 
+	}
+}
+\date{\today}
+\title{Paper Title: This is a template for an IEEE submission}
+
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+		The abstract
+	\end{abstract}
+	
+	\begin{IEEEkeywords}
+		keywords must be lowercased,
+		common mode chokes,
+		ferrite,
+		complex permeability,
+		multi conductor transmission lines
+	\end{IEEEkeywords}
+	
+	\input{introduction.tex}
+	\input{experimental.tex}
+	\input{conclusions.tex}
+	
+	\section{Acknowledgements}	
+	The authors want to thank these people for this and that company for that.
+
+	\bibliographystyle{IEEEtran}
+	\bibliography{bibliography/references.bib}
+	
+\end{document}
