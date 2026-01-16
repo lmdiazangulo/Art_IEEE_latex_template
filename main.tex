@@ -41,6 +41,8 @@
 \newcommand{\figref}  [1] {\text{Fig}~\autoref{#1}}
 \newcommand{\tabref}  [1] {\text{Tab.}~\autoref{#1}}
 \newcommand{\subfigureautorefname}{\figureautorefname} 
+\newcommand{\todoi}[1]{\todo[inline]{#1}}
+
 \newcommand{\grad}{\nabla}
 \newcommand{\divergence}{\grad \cdot}
 \newcommand{\curl}{\grad \times}
@@ -86,10 +88,13 @@
 	Author 1, Author 2, Author 3$^{*}$, \newline Author 4, Author 5, and Author 6, {\em IEEE Senior Member}
 	\thanks{The 1st, 2nd, 3rd, 4th, and 7th authors are with the XXXX, in University of Granada, Spain. 
 		5th author is with YYYY company.
-		6th author is with ZZZZ institution. 
-		* Corresponding author e-mail: \texttt{xxx@yyy.zzz}.}
+		6th author is with ZZZZ institution.\\
+		* Corresponding author e-mail: \texttt{xxx@yyy.zzz}.
+		\todoi{author affiliations}
+	}
 	\thanks{The work described in this paper and the research leading to these results were supported by the 
 		XXXX grants. 
+		\todoi{Funding acknowledgements}
 	}
 }
 \date{\today}
@@ -99,7 +104,8 @@
 	\maketitle
 	
 	\begin{abstract}
-		The abstract
+		\lipsum[150]
+		\todoi{The abstract, usually written at the end}
 	\end{abstract}
 	
 	\begin{IEEEkeywords}
@@ -108,14 +114,17 @@
 		ferrite,
 		complex permeability,
 		multi conductor transmission lines
+		\todoi{keywords}
 	\end{IEEEkeywords}
 	
 	\input{introduction.tex}
+	\input{method.tex}
 	\input{experimental.tex}
 	\input{conclusions.tex}
 	
 	\section{Acknowledgements}	
 	The authors want to thank these people for this and that company for that.
+	\todoi{Acknowledgements}
 
 	\bibliographystyle{IEEEtran}
 	\bibliography{bibliography/references.bib}
