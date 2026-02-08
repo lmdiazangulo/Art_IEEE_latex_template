@@ -1,0 +1,1 @@
+Include here a copy of the submitted files. Within folders with the name of conference or journal to which it is submitted.
