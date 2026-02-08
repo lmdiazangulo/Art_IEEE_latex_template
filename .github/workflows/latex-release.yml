@@ -28,15 +28,21 @@ jobs:
         with:
           name: pdf
           path: main.pdf
-          retention-days: 30
+          retention-days: 60
 
-      - name: Create or update release (latest) and attach PDF
+      - name: Prepare unique tag
+        id: tag
+        run: |
+          TAG="v$(date +%Y-%m-%d-%H%M)--${GITHUB_SHA::7}"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+
+      - name: Create release and attach PDF
         uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: latest
-          name: Latest PDF
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: PDF ${{ steps.tag.outputs.tag }}
           files: main.pdf
           draft: false
           prerelease: false
